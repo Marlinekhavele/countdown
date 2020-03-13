@@ -1,0 +1,83 @@
+body {  
+  background-color: #1b7fc3; 
+ 
+}
+.bg{
+  text-align: center;
+}
+.container{
+  width: 600px;
+ 
+
+ 
+}
+.text{
+  color: #ffffff;
+  font-size: 9px;
+}
+.text1{
+  color: #ffffff;
+    font-size: 25px;
+
+}
+#example1 {
+  border: 5px #ffffff;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #1b7fc3;
+  box-shadow: 5px 3px 5px black;
+}
+#clock {
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 0 10px rgba(96,134,181,.3);
+}
+
+.clock-section { display: inline-block; }
+
+.clock-section .value {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  /* background-color: #333; */
+  text-align: center;
+  border-radius: 10px;
+}
+.value {
+  font-size: 50px;
+}
+.text-warning {
+    color: #ffffff!important;
+}  
+
+.clock-label {
+  text-align: center;
+  padding-top: 4px;
+  font-size: 11px;
+  color: #ffffff;
+}
+
+
+.bg-dark{
+    background-color:  #1b7fc3!important;
+}
+.navbar-brand{
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 28px;
+}
+.navbar-dark .navbar-nav .nav-link{
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+
+}
+.navbar-dark .navbar-nav .nav-item{
+    margin: 0 15px;
+}
+.left{
+  float: right;
+  margin-left: 800px;
+}

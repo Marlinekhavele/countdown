@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="images/sendy.png">
+    <!-- <script type="text/javascript" src="js/app.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <title>Sendy</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img src="images/white.png" alt="" width="160">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="left">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Helpline: +254 712345678 </a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link active" href="#">Joseph Babu</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Menu
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </nav>
+    <div class="bg">
+        <img src="images/clip.png" alt="" width="250">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="clock" class="card card-default">
+                    <div class="card-body" id="example1">
+                        <p class="text">LAUCHING SOON</p>
+                        <h5 class="text1">SENDY FREIGHT</h5>
+                        <div class="clock-section">
+                            <div id="days" class="value text-warning">00</div>
+                            <div class="clock-label">DAYS</div>
+                        </div>
+                        <div class="clock-section">
+                            <div id="hours" class="value text-warning">00</div>
+                            <div class="clock-label">HOURS</div>
+                        </div>
+                        <div class="clock-section">
+                            <div id="minutes" class="value text-warning">00</div>
+                            <div class="clock-label">MINUTES</div>
+                        </div>
+                        <div class="clock-section">
+                            <div id="seconds" class="value text-warning">00</div>
+                            <div class="clock-label">SECONDS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script type="text/javascript">
+    var targetDate = moment('3/14/2020');
+
+    var $days = $('#days'),
+        // $hours = $('#hours'),
+        $minutes = $('#minutes'),
+        $seconds = $('#seconds');
+
+    setInterval(function () {
+        // Calculate the time remaining
+        var now = moment();
+        var timeLeft = moment.duration(targetDate.diff(now));
+        updateClock(timeLeft);
+    }, 10);
+
+    function updateClock(remainingTime) {
+        // Display the difference
+        var days = Math.floor(remainingTime.asDays()),
+            // hrs = Math.floor(remainingTime.asHours()) % 24,
+            mins = Math.floor(remainingTime.asMinutes()) % 10,
+            secs = Math.floor(remainingTime.asSeconds()) % 60;
+        $('#days').text(padNumber(days));
+        // $('#hours').text(padNumber(hrs));
+        $('#minutes').text(padNumber(mins));
+        $('#seconds').text(padNumber(secs));
+    }
+
+    function padNumber(number) {
+        var formattedNum = number;
+        if (number < 10) {
+            formattedNum = "0" + formattedNum;
+        }
+        if (padNumber == 5 && formattedNum == 0) {
+            window.location.href = "www.sendyit.com/freight "
+        }
+        return formattedNum;
+    }
+
+
+</script>
+
+
+</html>
