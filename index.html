@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -129,9 +130,10 @@
         if (number < 10) {
             formattedNum = "0" + formattedNum;
         }
-        if (padNumber == 5 && formattedNum == 0) {
-            window.location.href = "www.sendyit.com/freight "
-        }
+
+        setTimeout(function () {
+            window.location.href = "https://www.sendyit.com/freight";
+        }, 2000);
         return formattedNum;
     }
 
